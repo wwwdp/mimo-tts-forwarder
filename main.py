@@ -992,6 +992,15 @@ GET  /health            - 健康检查</pre>
 const VOICES = {{VOICES_JSON}};
 const API_CONFIGURED = {{API_KEY_CONFIGURED}};
 
+// Auto-fill Legado URLs with current server address
+(function() {
+    const base = window.location.origin;
+    const presetEl = document.getElementById('legadoUrlPreset');
+    const cloneEl = document.getElementById('legadoUrlClone');
+    if (presetEl) presetEl.textContent = base + '/api/text-to-speech,{"method":"POST","body":"text={{encodeURIComponent(speakText)}}&voice=bingtang"}';
+    if (cloneEl) cloneEl.textContent = base + '/api/text-to-speech,{"method":"POST","body":"text={{encodeURIComponent(speakText)}}&voice=clone_xxxx"}';
+})();
+
 // Init status
 (function() {
     const dot = document.getElementById('statusDot');
