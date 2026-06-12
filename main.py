@@ -900,13 +900,13 @@ body {
             <div style="margin-bottom:1rem">
                 <label style="font-weight:600;font-size:0.85rem;color:var(--text-muted)">预置音色（冰糖/茉莉/苏打/白桦等）：</label>
                 <div class="api-info" style="margin-top:0.3rem">
-                    <pre id="legadoUrlPreset">http://103.173.155.221:8765/api/text-to-speech,{"method":"POST","body":"text={{encodeURIComponent(speakText)}}&voice=bingtang"}</pre>
+                    <pre id="legadoUrlPreset">http://YOUR_SERVER:8765/api/text-to-speech,{"method":"POST","body":"text={{encodeURIComponent(speakText)}}&voice=bingtang"}</pre>
                 </div>
             </div>
             <div style="margin-bottom:1rem">
                 <label style="font-weight:600;font-size:0.85rem;color:var(--text-muted)">克隆音色（替换 clone_xxxx 为你的音色ID）：</label>
                 <div class="api-info" style="margin-top:0.3rem">
-                    <pre id="legadoUrlClone">http://103.173.155.221:8765/api/text-to-speech,{"method":"POST","body":"text={{encodeURIComponent(speakText)}}&voice=clone_xxxx"}</pre>
+                    <pre id="legadoUrlClone">http://YOUR_SERVER:8765/api/text-to-speech,{"method":"POST","body":"text={{encodeURIComponent(speakText)}}&voice=clone_xxxx"}</pre>
                 </div>
             </div>
             <p style="margin-bottom:0.5rem;color:var(--text-muted);font-size:0.85rem">
