@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  mimo-tts:
+    build: .
+    container_name: mimo-tts-forwarder
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8765/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
